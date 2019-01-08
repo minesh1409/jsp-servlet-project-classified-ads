@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from templatecycle.com/demo/bootclassified-v1.5/dist/job-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Oct 2016 14:39:49 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+<title>BOOTCLASIFIED - Responsive Classified Theme</title>
+ 
+<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+ 
+<link href="assets/css/style.css" rel="stylesheet">
+ 
+<link href="assets/css/owl.carousel.css" rel="stylesheet">
+<link href="assets/css/owl.theme.css" rel="stylesheet">
+ 
+ 
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+ 
+<script>
+        paceOptions = {
+            elements: true
+        };
+    </script>
+<script src="assets/js/pace.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<div class="header">
+<nav class="navbar   navbar-site navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+<a href="job-home.html" class="navbar-brand logo logo-title">
+ 
+<span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo shape-0"></i> </span>
+JOB<span>CLASSIFIED </span> </a></div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+<li><a href="job-list.html">Browse Jobs</a></li>
+<li><a href="#">Add Resume</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="login.html">Login</a></li>
+<li><a href="signup.html">Signup</a></li>
+<li class="postadd"><a class="btn btn-block   btn-border btn-post btn-danger" href="job-post.html">Post A Job</a></li>
+</ul>
+</div>
+ 
+</div>
+ 
+</nav>
+</div>
+ 
+<div class="search-row-wrapper" style="background-image: url(images/jobs/ibg.jpg); background-size: cover; background-position: center center;">
+<div class="container text-center">
+<div class="col-sm-3">
+<input class="form-control keyword" type="text" placeholder="Jobs Title">
+</div>
+<div class="col-sm-3">
+<select class="form-control" name="category" id="search-category">
+<option selected="selected" value="">All Categories</option>
+<option value="111">Accounting</option>
+<option value="112">Administration &amp; Office Support</option>
+<option value="113">Agriculture, Animals &amp; Conservation</option>
+<option value="114">Architecture &amp; Design</option>
+<option value="115">Banking &amp; Financial Services</option>
+<option value="116">Communications, Advertising, Arts &amp; Media</option>
+<option value="117">Community Services</option>
+<option value="118">Construction</option>
+<option value="119">Customer Service &amp; Call Centre</option>
+<option value="123">Defence &amp; Protective Services</option>
+<option value="120">Education &amp; Training</option>
+<option value="121">Engineering</option>
+<option value="122">Executive &amp; General Management</option>
+<option value="130">Health &amp; Medical</option>
+<option value="124">Hospitality &amp; Tourism</option>
+<option value="125">Human Resources &amp; Recruitment</option>
+<option value="126">Information &amp; Communication Technology (ICT)</option>
+<option value="127">Insurance &amp; Superannuation</option>
+<option value="128">Legal</option>
+<option value="129">Manufacturing</option>
+<option value="131">Mining &amp; Energy</option>
+<option value="132">Real Estate &amp; Property</option>
+<option value="133">Retail</option>
+<option value="134">Sales</option>
+<option value="135">Science</option>
+<option value="136">Sport &amp; Recreation</option>
+<option value="137">Trades &amp; Services</option>
+<option value="138">Transport &amp; Logistics</option>
+<option value="Other"> Other</option>
+</select>
+</div>
+<div class="col-sm-3">
+<select class="form-control" name="location" id="id-location">
+<option selected="selected" value="">All Locations</option>
+<option value="New York"> New York</option>
+<option value="South-West"> South West</option>
+<option value="South-East"> South East</option>
+<option value="East-England"> East England</option>
+<option value="East-Midlands"> East Midlands</option>
+<option value="West-Midlands"> West Midlands</option>
+<option value="North-East"> North East</option>
+<option value="North-West"> North West</option>
+<option value="Scotland"> Scotland</option>
+<option value="Wales"> Wales</option>
+<option value="Northern-Ireland"> Northern Ireland</option>
+<option value="England"> England</option>
+<option value="UK"> UK</option>
+<option value="Other-Locations">Other Locations</option>
+</select>
+</div>
+<div class="col-sm-3">
+<button class="btn btn-block btn-primary  "> Find Jobs <i class="fa fa-search"></i></button>
+</div>
+</div>
+</div>
+ 
+<div class="main-container">
+<div class="container">
+<div class="row">
+ 
+<div class="col-sm-3 page-sidebar mobile-filter-sidebar">
+<aside>
+<div class="inner-box">
+<div class=" list-filter">
+<h5 class="list-title"><strong><a href="#"> Date Posted </a></strong></h5>
+<div class="filter-date filter-content">
+<ul>
+<li>
+<input type="radio" value="1" id="posted_1" name="posted">
+<label for="posted_1">24 hours</label>
+</li>
+<li>
+<input type="radio" value="3" id="posted_3" name="posted">
+<label for="posted_3">3 days</label>
+</li>
+<li>
+<input type="radio" value="7" id="posted_7" name="posted">
+<label for="posted_7">7 days</label>
+</li>
+<li>
+<input type="radio" checked="checked" value="30" id="posted_30" name="posted">
+<label for="posted_30">30 days</label>
+</li>
+</ul>
+</div>
+</div>
+ 
+<div class="list-filter">
+<h5 class="list-title"><strong><a href="#">Employment Type</a></strong></h5>
+<div class="filter-content filter-employment-type">
+<ul class="browse-list list-unstyled">
+<li>
+<input type="checkbox" id="employment_all" value="all" class="emp" checked="checked">
+<label for="employment_all">All</label>
+</li>
+<li>
+<input type="checkbox" id="employment_jtft" value="jtft" class="emp emp-type">
+<label for="employment_jtft">Full Time</label>
+</li>
+<li>
+<input type="checkbox" id="employment_jtpt" value="jtpt" class="emp emp-type">
+<label for="employment_jtpt">Part Time</label>
+</li>
+<li>
+<input type="checkbox" id="employment_jtct" value="jtct" class="emp emp-type">
+<label for="employment_jtct">Contractor</label>
+</li>
+<li>
+<input type="checkbox" id="employment_jtin" value="jtin" class="emp emp-type">
+<label for="employment_jtin">Intern</label>
+</li>
+<li>
+<input type="checkbox" id="employment_jtse" value="jtse" class="emp emp-type">
+<label for="employment_jtse">Seasonal / Temp</label>
+</li>
+</ul>
+</div>
+</div>
+ 
+<div class="  list-filter">
+<h5 class="list-title"><strong><a href="#">Salary Pay Range</a></strong></h5>
+<div class="filter-salary filter-content ">
+<form role="form" class="form-inline ">
+<div class="form-group col-sm-4 no-padding">
+<input type="text" placeholder="$ 2000 " id="minPrice" class="form-control">
+</div>
+<div class="form-group col-sm-1 no-padding text-center hidden-xs"> -</div>
+<div class="form-group col-sm-4 no-padding">
+<input type="text" placeholder="$ 3000 " id="maxPrice" class="form-control">
+</div>
+<div class="form-group col-sm-3 no-padding">
+<button class="btn btn-default pull-right btn-block-xs" type="submit">GO
+</button>
+</div>
+</form>
+<div class="clearfix"></div>
+<ul class="mt15">
+<li>
+<input type="radio" name="pay" id="pay_0" value="0" checked="checked">
+<label for="pay_0">Any</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_20" value="20">
+<label for="pay_20">$20,000+</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_40" value="40">
+<label for="pay_40">$40,000+</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_60" value="60">
+<label for="pay_60">$60,000+</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_80" value="80">
+<label for="pay_80">$80,000+</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_100" value="100">
+<label for="pay_100">$100,000+</label>
+</li>
+<li>
+<input type="radio" name="pay" id="pay_120" value="120">
+<label for="pay_120">$120,000+</label>
+</li>
+</ul>
+</div>
+<div style="clear:both"></div>
+</div>
+ 
+<div class="locations-list  list-filter">
+<h5 class="list-title"><strong><a href="#">Specialisms</a></strong></h5>
+<ul class="browse-list list-unstyled long-list">
+<li><a href="job-list.html">Engineering jobs <span class="count">12,578</span> </a>
+</li>
+<li><a href="job-list.html">Estate Agency jobs <span class="count">4,546</span> </a>
+</li>
+<li><a href="job-list.html">Financial Services jobs <span class="count">9,115</span></a>
+</li>
+<li><a href="job-list.html">Banking jobs <span class="count">1,468</span></a></li>
+<li><a href="job-list.html">Security &amp; Safety jobs <span class="count">723</span></a></li>
+<li><a href="job-list.html">Graduate jobs <span class="count">18,514</span></a></li>
+<li><a href="job-list.html">Health &amp; Medicine jobs <span class="count">10,621</span></a></li>
+<li><a href="job-list.html">Training jobs <span class="count">651</span></a></li>
+<li><a href="job-list.html">Hospitality &amp; Catering jobs <span class="count">7,585</span></a>
+</li>
+<li><a href="job-list.html">Human Resources jobs <span class="count">3,768</span></a></li>
+<li><a href="job-list.html">IT &amp; Telecoms jobs <span class="count">17,242</span></a>
+</li>
+<li><a href="job-list.html">IT Contractor jobs <span class="count">2,102</span></a>
+</li>
+</ul>
+</div>
+ 
+<div class="locations-list  list-filter">
+<h5 class="list-title"><strong><a href="#">Location</a></strong></h5>
+<ul class="browse-list list-unstyled long-list">
+<li><a href="job-list.html">New York</a></li>
+<li><a href="job-list.html">South West</a></li>
+<li><a href="job-list.html">South East</a></li>
+<li><a href="job-list.html">East England</a></li>
+<li><a href="job-list.html">East Midlands</a></li>
+<li><a href="job-list.html">West Midlands</a></li>
+<li><a href="job-list.html">North East</a></li>
+<li><a href="job-list.html">North West</a></li>
+<li><a href="job-list.html">Scotland</a></li>
+<li><a href="job-list.html">Wales</a></li>
+<li><a href="job-list.html">Northern Ireland</a></li>
+<li><a href="job-list.html">England</a></li>
+<li><a href="job-list.html">UK</a></li>
+<li><a href="job-list.html"> Other Locations </a></li>
+</ul>
+</div>
+ 
+<div style="clear:both"></div>
+</div>
+ 
+</aside>
+</div>
+ 
+<div class="col-sm-9 page-content col-thin-left">
+<div class="category-list">
+<div class="tab-box clearfix ">
+ 
+<div class="col-lg-12  box-title no-border">
+<div class="inner">
+<h2><span> Software </span> Engineer
+<small> 1000+ Jobs Found</small>
+</h2>
+</div>
+</div>
+ 
+<div class="mobile-filter-bar col-lg-12  ">
+<ul class="list-unstyled list-inline no-margin no-padding">
+<li class="filter-toggle">
+<a class="">
+<i class="  icon-th-list"></i>
+Filters
+</a>
+</li>
+<li>
+<div class="dropdown">
+<a data-toggle="dropdown" class="dropdown-toggle"><i class="caret "></i>
+Short by </a>
+<ul class="dropdown-menu">
+<li><a href="#" rel="nofollow">Relevance</a></li>
+<li><a href="#" rel="nofollow">Date</a></li>
+<li><a href="#" rel="nofollow">Company</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="menu-overly-mask"></div>
+ 
+<div class="tab-filter hide-xs">
+<select class="selectpicker" data-style="btn-select" data-width="auto">
+<option value="Short by">Short by</option>
+<option value="Relevance">Relevance</option>
+<option value="Company">Company</option>
+</select>
+</div>
+ 
+</div>
+ 
+<div class="listing-filter hidden-xs">
+<div class="pull-left col-sm-6 col-xs-12">
+<div class="breadcrumb-list text-center-xs">
+<a class="jobs-s-tag" rel="nofollow" title="Software Architect">Software
+Engineer </a>
+in <a rel="nofollow" class="jobs-s-tag"> New York</a></div>
+</div>
+<div class="pull-right col-sm-6 col-xs-12 text-right text-center-xs listing-view-action">
+<a class="clear-all-button text-muted">Clear all</a>
+</div>
+<div style="clear:both"></div>
+</div>
+ 
+<div class="adds-wrapper jobs-list">
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/1.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">CO Engineering</a></h5>
+<h4 class="job-title"><a href="job-details.html"> Front-end Developer </a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> New York, NY </span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $50000 - $81000 a year</span></span>
+<div class="jobs-desc">
+A Web Tester / Developer with experience in PHP, HTML, CSS and
+JavaScript is needed to join a global music services company.
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/2.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">XIAO Co.</a></h5>
+<h4 class="job-title"><a href="job-details.html">UI/UX Front-End Web
+Developer </a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> New York, NY </span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $10000 - $23000 a year</span></span>
+<div class="jobs-desc"> We are seeking a talented UI/UX Front End Web Developer
+to design, develop, support web app software. UI/UX Front-End Web
+Developer....
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/23.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">Thatherton Fuels</a></h5>
+<h4 class="job-title"><a href="job-details.html">Javascript Developer</a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> New York, NY </span> <span class="date"><i class=" icon-clock"> </i>Contract </span><span class=" salary"> <i class=" icon-money"> </i>$50.00 - $60.00 / Hr</span></span>
+<div class="jobs-desc">You’re obsessed with creating scalable applications using
+Java. 5+ years of professional coding experience with Java. PKI and Security
+Software....
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/4.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">Praxis corporation</a></h5>
+<h4 class="job-title"><a href="job-details.html">Web Developer Jr. - Front
+End</a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> Barrington, IL</span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $20000 - $41000 a year</span></span>
+<div class="jobs-desc"> Our developers work out of our offices in New York,
+Washington DC, Los Angeles, Oakland, Boston, and London. We're looking for a
+front-end web developer to join...
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/5.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">Bluth Company</a></h5>
+<h4 class="job-title"><a href="job-details.html">UI/Web Developer</a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> New York, NY </span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $50000 - $70000 a year</span></span>
+<div class="jobs-desc"> Delivering a complete front end application. We are
+looking for an AngularJS/Web Developer responsible for the client side of
+our service....
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/17.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">Data Systems Ltd.</a></h5>
+<h4 class="job-title"><a href="job-details.html">Full Stack Engineer,
+International</a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> Mountain View, OR</span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $30000 - $51000 a year</span></span>
+<div class="jobs-desc"> You believe in the transformative power education brings
+to people's lives, and know how to create the code that will further
+opportunities for these lifelong...
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+<div class="item-list job-item">
+<div class="col-sm-1  col-xs-2 no-padding photobox">
+<div class="add-image"><a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/14.jpg" alt="company logo"></a></div>
+</div>
+ 
+<div class="col-sm-10  col-xs-10  add-desc-box">
+<div class="add-details jobs-item">
+<h5 class="company-title "><a href="#">Videlectrix Ltd.</a></h5>
+<h4 class="job-title"><a href="job-details.html">Java Engineer </a></h4>
+<span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> San Francisco </span> <span class="date"><i class=" icon-clock"> </i>Full-time</span><span class=" salary"> <i class=" icon-money"> </i> $30000 - $51000 a year</span></span>
+<div class="jobs-desc"> Java C/C++, Python. 5+ years of backend software
+development experience. Projects include real time data synchronization,
+identity management, large...
+</div>
+<div class="job-actions">
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#" class="save-job">
+<span class="fa fa-star-o"></span>
+Save Job
+</a>
+</li>
+<li class="saved-job hide">
+<a class="saved-job" href="#">
+<span class="fa fa-star"></span>
+Saved Job
+</a>
+</li>
+<li>
+<a class="email-job" href="#">
+<i class="fa fa-envelope"></i>
+Email Job
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+ 
+</div>
+ 
+<div class="tab-box  save-search-bar text-center"><a href="#"> <i class=" icon-star-empty"></i>
+Save Search </a></div>
+</div>
+<div class="pagination-bar text-center">
+<ul class="pagination">
+<li class="active"><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li><a href="#"> ...</a></li>
+<li><a class="pagination-btn" href="#">Next &raquo;</a></li>
+</ul>
+</div>
+ 
+<div class="post-promo text-center">
+<h2> Looking for a job? </h2>
+<h5> Upload your CV and easily apply to jobs from any device! </h5>
+<a href="#" class="btn btn-lg btn-border btn-post btn-danger">Upload your CV </a></div>
+ 
+</div>
+ 
+</div>
+</div>
+</div>
+ 
+<div class="footer" id="footer">
+<div class="container">
+<ul class=" pull-left navbar-link footer-nav">
+<li><a href="index.html"> Home </a> <a href="about-us.html"> About us </a> <a href="terms-conditions.html"> Terms and
+Conditions </a> <a href="#"> Privacy Policy </a> <a href="contact.html"> Contact us </a> <a href="faq.html"> FAQ </a>
+</ul>
+<ul class=" pull-right navbar-link footer-nav">
+<li> &copy; 2015 JobtClassified</li>
+</ul>
+</div>
+</div>
+ 
+</div>
+ 
+ 
+<div class="modal fade" id="selectRegion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="exampleModalLabel"><i class=" icon-map"></i> Select your region </h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-12">
+<p>Popular cities in <strong>UK</strong></p>
+<hr class="hr-thin">
+</div>
+<div class="col-md-4">
+<ul class="list-link list-unstyled">
+<li><a href="#">New York </a></li>
+<li><a href="#">Bristol </a></li>
+<li><a href="#">New York </a></li>
+<li><a href="#">Kent </a></li>
+<li><a href="#">Essex </a></li>
+<li><a href="#">Lancashire </a></li>
+<li><a href="#">Bedfordshire </a></li>
+<li><a href="#">Berkshire </a></li>
+<li><a href="#">Buckinghamshire </a></li>
+<li><a href="#">Cambridgeshire </a></li>
+<li><a href="#">Cheshire </a></li>
+<li><a href="#">Cornwall </a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list-link list-unstyled">
+<li><a href="#">County Durham </a></li>
+<li><a href="#">Cumbria </a></li>
+<li><a href="#">Derbyshire </a></li>
+<li><a href="#">Devon </a></li>
+<li><a href="#">Dorset </a></li>
+<li><a href="#">East Yorkshire </a></li>
+<li><a href="#">East Sussex </a></li>
+<li><a href="#">Gloucestershire </a></li>
+<li><a href="#">Hampshire </a></li>
+<li><a href="#">Herefordshire </a></li>
+<li><a href="#">Hertfordshire </a></li>
+<li><a href="#">Isle of Wight </a></li>
+<li><a href="#">Leicestershire </a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list-link list-unstyled">
+<li><a href="#">County Durham </a></li>
+<li><a href="#">Cumbria </a></li>
+<li><a href="#">Derbyshire </a></li>
+<li><a href="#">Devon </a></li>
+<li><a href="#">Dorset </a></li>
+<li><a href="#">East Yorkshire </a></li>
+<li><a href="#">East Sussex </a></li>
+<li><a href="#">Gloucestershire </a></li>
+<li><a href="#">Hampshire </a></li>
+<li><a href="#">Herefordshire </a></li>
+<li><a href="#">Hertfordshire </a></li>
+<li><a href="#">Isle of Wight </a></li>
+<li><a href="#">Leicestershire </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+ 
+ 
+<script src="../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+ 
+<script src="assets/js/owl.carousel.min.js"></script>
+ 
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+ 
+<script src="assets/js/hideMaxListItem.js"></script>
+ 
+<script src="assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js"></script>
+<script src="assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js"></script>
+ 
+<script src="assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from templatecycle.com/demo/bootclassified-v1.5/dist/job-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Oct 2016 14:40:12 GMT -->
+</html>
